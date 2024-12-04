@@ -6,9 +6,16 @@
 // "Medium" om siffran är 30 till och med 50
 // "Unknown" om inget av ovan stämmer
 
-function howFast(number) {
-    //Din kod här
-
+function howFast(number){
+  if(number >= 100) {
+    console.log("Fast")
+  } else if (number >= 30 && number <=50){
+    console.log("Medium")
+  } else if (number <= 20 && number >= 1){
+    console.log("Slow")
+  } else {
+    console.log("Unknown")
+  }
   }
   
   console.log(howFast(20)); // Ska logga "Slow"
