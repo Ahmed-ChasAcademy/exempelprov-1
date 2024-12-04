@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    border: 2px solid red;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+#toDoList li {
+    display: flex;
+    justify-content: space-between;
+    line-height: 5rem;
+    
+}
