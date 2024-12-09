@@ -3,11 +3,32 @@
 // element har tagits bort och endast unika element finns kvar.
 
 
+//set method easiest i understood
+/*
+
 function removeDuplicates(array) {
-    // Din kod här
+    const uniqueNumbers = [... new Set(array)];
+    console.log(uniqueNumbers)
 }
 
-
-
-
 console.log(removeDuplicates([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // Ska logga [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+removeDuplicates([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+
+*/
+
+
+
+
+
+
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const reduceMethod = numbers.reduce((acc, value) => {
+    if (!acc.includes(value)) {
+        acc.push(value)
+    }
+    return acc 
+}, []);
+
+console.log(reduceMethod);

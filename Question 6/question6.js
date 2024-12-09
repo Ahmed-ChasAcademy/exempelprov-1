@@ -2,10 +2,16 @@
 // addBgColor tar in ett DOM-element och en färg-kod,
 // addBgColor ska uppdatera elementets style med färgkoden.
 // tips: använd elementets style
-const element = document.querySelector("#my-element");
+const element = document.querySelector("#myElement");
 
 function addBgColor(element, bgColor) {
+
+   element.style.color = bgColor;
   // lägg till din kod här
 }
 
-addBgColor(element, "#ff0000"); // Ska göra elementet rött
+
+
+
+addBgColor(element, "green")
+addBgColor(element, "Blue")

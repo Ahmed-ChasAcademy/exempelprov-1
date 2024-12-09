@@ -1,11 +1,5 @@
 
-const doUndoBtn = () => {
-  if(todobtn.textContent === "do") {
-    todobtn.textContent = "undo"
-  } else if(todobtn.textContent === "undo") {
-          todobtn.textContent = "do"
-    }
-};
+const toDobuttons = document.querySelectorAll("todobtn")
 
 
 async function getTodos() {
@@ -30,19 +24,28 @@ async function getTodos() {
       const todobtn = document.createElement("button"); 
       const hrLine = document.createElement("hr")
       todobtn.textContent = "do";
-      todoItem.textContent = `${todo.id}: ${todo.title} - ${todo.completed ? 'Completed' : 'Not completed'}`;
+      todoItem.textContent = `${todo.id}: ${todo.title}`;
       toDoList.appendChild(todoItem); 
       toDoList.appendChild(hrLine)
       todoItem.appendChild(todobtn);
       todobtn.addEventListener("click", doUndoBtn);
+      
 
       
     });
   } catch (error) {
     console.error('Error fetching data:', error);
   }
+  
 }
 
+const doUndoBtn = () => {
+  if(todobtn.textContent === "do") {
+    todobtn.textContent = "undo"
+  } else if(todobtn.textContent === "undo") {
+          todobtn.textContent = "do"
+    }
+};
 getTodos(); 
 
 
